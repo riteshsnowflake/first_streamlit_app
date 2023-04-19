@@ -48,11 +48,6 @@ except URLError as e:
     #take the json version of the response and normalize it
     #output it to the screen as a table
   
-#dont run anything past the snowflake connection
-streamlit.stop()
-
-
-
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
@@ -76,6 +71,9 @@ if streamlit.button('Get Fruit Load List'):
   streamlit.dataframe(my_data_rows)
   
 #streamlit.dataframe(my_data_rows)
+
+#dont run anything past the snowflake connection
+streamlit.stop()
 
 #allow the end user to add a fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?',)

@@ -73,7 +73,7 @@ if streamlit.button('Get Fruit Load List'):
 #streamlit.dataframe(my_data_rows)
 
 #dont run anything past the snowflake connection
-streamlit.stop()
+#streamlit.stop()
 
 #allow the end user to add a fruit to the list
 

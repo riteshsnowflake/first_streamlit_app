@@ -58,7 +58,7 @@ my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 #streamlit.text("The fruit load list containts:")
 #streamlit.text(my_data_row)
-streamlit.header("View our Fruit list - Add your Favorites!:")
+streamlit.header("View Our Fruit list - Add your Favorites!")
 #snowflake-related functions
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
